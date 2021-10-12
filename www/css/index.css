@@ -1,0 +1,304 @@
+.background 
+{
+    background-image: url("../img/loginbkk.jpg"); 
+}
+
+/* .login 
+{
+    padding: 15px;
+    margin: auto;
+}
+.login input[type=text], .login input[type=password]
+{
+    margin: 0px;
+} */
+.container {
+    padding: 0 20px;
+  }
+
+.sub-container {
+    max-width: 500px;
+    width: 100%;
+    height: 350px;
+    margin: 150px auto 0;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.125);
+  }
+  
+  .sub-container .banner-img {
+    width: 220px;
+    height: 100%;
+  }
+  
+  .sub-container .banner-img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .sub-container .login-form {
+    width: 280px;
+    height: 100%;
+    text-align: center;
+    padding: 16px 0px 0;
+    /* padding: 40px 35px 0; */
+    position: relative;
+  }
+  
+  .sub-container .login-form .title {
+    color: #004180;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .login-form .label {
+    color: #524a4a;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  .login-form .input {
+    margin: 5px 0 15px;
+    width: 100%;
+    padding: 8px;
+  }
+  
+  .login-form .forgot a {
+    color: #004180;
+    font-size: 18px;
+  }
+  
+  .login-form .btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    background: #004180;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .login-form input[type=button]
+  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    background: #004180;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 1;
+    text-indent: 9px;
+
+  }
+
+  .login-form .ui-input-text 
+  {
+    margin: .5em;
+    
+  }
+  .login-form .ui-focus
+  {
+    box-shadow: 0 0 12px #004180 !important;
+  }
+  
+  .login-form .ui-btn
+  {
+    margin: .5em;
+  }
+  @media screen and (max-width: 500px) {
+    .sub-container {
+      flex-direction: column;
+      max-width: 300px;
+      height: auto;
+      margin-top: 50px;
+    }
+    .sub-container .banner-img {
+      width: 100%;
+      height: 220px;
+    }
+    .sub-container .login-form {
+      width: 100%;
+      padding: 20px 0px 0;
+      /* padding: 20px 35px 0; */
+    }
+    .sub-container .login-form .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .login-form .input {
+      margin-bottom: 10px;
+    }
+  
+    .login-form .forgot {
+      margin-bottom: 55px;
+    }
+    .login-form .btn {
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .login-form input[type=button]
+  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    background: #004180;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 1;
+    text-indent: 9px;
+
+  }
+  }
+
+
+/*    owncss file css   */
+
+/* personal css start */
+
+.headContainer
+{
+    background-color: #004180 !important;
+    color: #FFFFFF !important;
+}
+.footerContainer 
+{
+    /* background-color: #004180 !important; */
+    color: #FFFFFF !important;
+    height: 100px;
+    text-align: center;
+    
+
+}
+
+.vMiddle{
+  display: inline-block; 
+  /* margin: 20px; */
+}
+.vframe{  
+  width: 400px;
+  height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}    
+.vMiddle img{
+  max-width: 100%;
+  max-height: 100%;
+  /* display: block; */
+  /* margin: 0 auto; */
+  margin-right: 10px ;
+}
+
+
+/* .helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+} */
+.panelContainer ul
+{
+    /* background-color: #004180 !important; */
+    /* color: #FFFFFF !important; */
+    list-style-type: none;
+    padding: 1px;
+}
+/* .formStyle label */
+/* { */
+    /* margin-top: 10px; */
+/* } */
+
+.overRidejquerymrg0 .ui-field-contain > label ~ [class*="ui-"], .ui-field-contain .ui-controlgroup-controls
+{
+    margin: .5em 0;
+}
+
+#loader {
+  /* border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+  z-index: 99999;
+  position: absolute; */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  /* position: absolute;
+  top: 100px;
+  left: 240px;
+  z-index: 100; */
+  position: absolute;
+  top: 139px;
+  left: 16px;
+  z-index: 100;
+  width: 400px;
+  height: 400px;
+  z-index: 9999;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.errorP
+{
+  color: red;
+  font-size: 11px;
+  margin: 1px;
+  
+}
+.pgHeading
+{
+  text-align: center;
+  /* background-color: #a00009; */
+  color: #FFDF51 ;
+  font-size: 26px;
+}
+.container  a
+{
+  background-color: #FFDF51 !important;
+}
+.yellowBg
+{
+  background-color: #FFDF51 !important;
+}
+#selectGetCat-button
+{
+  background-color: #FFDF51 !important;
+}

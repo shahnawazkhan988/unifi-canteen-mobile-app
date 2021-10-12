@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">
+
+
+
+
+
+
+  <title>Responsive Login Form</title>
+  <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+  <link rel="stylesheet" href="css/index.css">
+  <!-- <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/owncss.css"> -->
+  
+ 
+  <script src="js/jquery.js"></script>
+  <script src="js/ownScript.js"></script>
+  <script src="js/jquery.mobile-1.4.5.js"></script>
+
+  <!-- <script>
+     $(document).on('mobileinit', function () {
+      $.mobile.defaultPageTransition = 'slide';
+      $.mobile.allowCrossDomainPages = true;
+    
+    });
+  </script> -->
+
+</head>
+
+<body >
+  <!-- <div id='loader' style='display: none;' class="center">
+    <img src='img/ajax-loader.gif' width='32px' height='32px'>
+  </div> -->
+  <div data-role="page" id="login" class="background">
+    <div role="main" class="ui-content">   
+       <!-- Image loader -->
+       <div id='loader' style='display: none;'>
+        <img id="loading-image" src='img/ajax-loader.gif' width='32px' height='32px'>
+      </div>
+      <!-- Image loader -->   
+      <div class="container">
+        <div class="sub-container">
+          <div class="banner-img">
+            <picture>
+              <source media="(min-width: 501px)" srcset="img/uifi-blue-logo-v.png">
+              <source media="(max-width: 500px)" srcset="img/uifi-blue-logo-h.png">
+              <img src="img/uifi-blue-logo-h.png" alt="Unifi">
+            </picture>
+          </div>
+          <form id="loginForm">
+          <div class="login-form">
+            <div class="title">
+              
+            </div>
+            <div class="input-fields">
+              <label class="label">Matricola</label>
+              <input type="text" class="input" name="matricola" id="matricola">
+              <p class="matricolaErr errorP"></p>
+            </div>
+            <div class="input-fields">
+              <label class="label">Password</label>
+              <input type="password" class="input" name="pass" id="pass">
+              <p class="passErr errorP"></p>
+            </div>
+            
+            <!-- <p><a href="#addTodayMenu" >Back to foo</a></p> -->
+            <input type="button" name="login" onclick="loginData()" value="Login">
+
+           
+          </div>
+        </form>
+        </div>
+      </div>
+      
+    </div><!-- /content -->
+  </div><!-- /page -->
+
+
+  <!-- Canteen Reg page -->
+  <div data-role="page" id="canteenReg" data-share="#shared" class="currentPage">
+    
+    <div role="main" class="ui-content">
+      <div id='loader' style='display: none;'>
+        <img id="loading-image" src='img/ajax-loader.gif' width='32px' height='32px'>
+      </div>
+      <img src="img/loginbk.jpg" width="100%" height="auto">
+      <div class="container overRidejquerymrg0">
+        <div class="pages-head">
+          <!-- <h3>Canteen Registration</h3> -->
+        </div>
+        <form>
+          <div class="ui-field-contain">
+            <label for="txtCanteenName">Name:</label>
+            <input type="text" id="txtCanteenName" data-clear-btn="true" name="txtCanteenName"/>
+            <label for="txtAddress">Address:</label>
+            <input type="text" id="txtAddress" data-clear-btn="true" name="txtAddress"/>
+            
+            <label for="btnSubmit"></label>
+            
+            <a class="ui-btn" onclick="testAPi()">Submit</a>
+          </div>
+        </form>
+      </div>
+    </div><!-- /content -->
+    
+  </div><!-- /page -->
+
+  <!-- Add Menu Category page -->
+  <div data-role="page" id="addmenucat" data-share="#shared" class="currentPage">
+    
+    <div role="main" class="ui-content">
+      <div id='loader' style='display: none;'>
+        <img id="loading-image" src='img/ajax-loader.gif' width='32px' height='32px'>
+      </div>
+      <img src="img/03a.png" width="100%" height="auto">
+      <div class="container overRidejquerymrg0">
+        <div class="pages-head">
+          <!-- <h3>Add Menu Category</h3> -->
+        </div>
+        <form id='addMenuCatFormData'>
+          <div class="ui-field-contain">
+            <label for="txtCategoryName">Name:</label>
+            <input type="text" id="txtCategoryName" data-clear-btn="true" name="cat_name" required/>
+            <p class="categoryNameErr errorP"></p>
+            <label for="txtDescription">Description:</label>
+            <input type="text" id="txtDescription" data-clear-btn="true" name="cat_description"/>
+            <p ></p>
+            <label for="btnSubmit"></label>
+            <a class="ui-btn" onclick="postAddMenuCat()">Submit</a>
+            <p class="dataInsert"></p>
+          </div>
+        </form>        
+      </div>
+    </div><!-- /content -->
+    
+  </div><!-- /page -->
+
+  <!-- Add Menu page -->
+<div data-role="page" id="addmenu" data-share="#shared">    
+  <div role="main" class="ui-content">
+    <div id='loader' style='display: none;'>
+      <img id="loading-image" src='img/ajax-loader.gif' width='32px' height='32px'>
+    </div>
+    <img src="img/03a.png" width="100%" height="auto">
+    <div class="container overRidejquerymrg0">
+    <div class="pages-head">
+      <!-- <h3>Add Menu Items</h3> -->
+    </div>
+    <a class="ui-btn  ui-btn-inline" onclick="addMoreMenuItem()" >Add More</a>
+    <a class="ui-btn  ui-btn-inline" onclick="removeMenuTab()" >Remove</a>
+    <a class="ui-btn ui-btn-inline"  onclick="submitMenuItem()" >Submit</a>      
+    <form id="addMenuForm" enctype="multipart/form-data">
+      <div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="set">
+  <!--       <div data-role="collapsible" id="set1" data-collapsed="true">
+          <h3>Menu 1</h3>
+          <label for="txtName">Category Name:</label>
+          <select name="select-native-1" id="select-native-1">
+            <option selected="selected"> Please Select Category </option>
+          </select>
+          <label for="txtMenuName">Menu Name:</label>
+          <input type="text" id="txtMenuName" data-clear-btn="true" name="txtMenuName"/>
+          <label for="txtMenuDescription">Menu Description:</label>
+          <input type="text" id="txtMenuDescription" data-clear-btn="true" name="txtMenuDescription"/>
+          <label for="txtUploadMenuImage">Upload Menu Image:</label>
+          <input type="file"  name="txtUploadMenuImage" accept="image/*" capture>
+        </div> -->
+      </div>
+      <p class="menuItemErr errorP"></p>
+      <p class="dataInsert"></p>
+    </form>
+    <p class="dataNotRemove errorP"></p>
+    </div>
+  </div><!-- /content -->    
+</div><!-- /page -->
+
+  <!-- Add Today Menu page -->
+  <div data-role="page" id="addTodayMenu"  data-share="#shared" class="currentPage">
+    
+    <div role="main" class="ui-content">
+      <div id='loader' style='display: none;'>
+        <img id="loading-image" src='img/ajax-loader.gif' width='32px' height='32px'>
+      </div>
+      <img src="img/02a.png" width="100%" height="auto">
+      <div class="container overRidejquerymrg0">
+        <div class="pages-head">
+          <!-- <h3>Add Today Menu</h3> -->
+        </div>
+        <form id="addTodayMenuData">          
+          <div class="ui-field-contain">
+            <label for="txtName">Category Name:</label>
+            <select name="cat_id" id="selectGetCat">
+              <option selected="selected"> Please Select Category </option>
+            </select>
+            <label for="select-custom-24">Select Menu Items:</label>
+            <select name="menu_id" id="select-custom-24" data-native-menu="false" multiple="multiple" >
+                    <option>Choose options</option>
+            <!--         <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>                     -->
+                </select>
+            </div>
+        </form>
+        <a class="ui-btn ui-btn-inline" onclick="postAddTodayMenu()" >Submit</a>
+        <p class="dataInsert"></p>
+      </div>
+    </div><!-- /content -->
+  </div><!-- /page -->
+
+  <!-- Show Today Menu page -->
+  <div data-role="page" id="showTodayMenu"  data-share="#shared" class="currentPage">
+    
+    <div role="main" class="ui-content">
+      <div id='loader' style='display: none;'>
+        <img id="loading-image" src='img/ajax-loader.gif' width='32px' height='32px'>
+      </div>
+      <img src="img/01a.png" width="100%" height="auto">
+      <div class="pages-head">
+        <h3 id="canHeading" class="pgHeading"></h3>
+      </div>
+      <div class="container overRidejquerymrg0" id="getTodayMenuContent">
+        <!-- <div class="pages-head">
+          <h3 id="canHeading">ff</h3>
+        </div> -->
+        <input type="hidden" id="spCateenId" name="spCateenId" value="">
+        <!-- <div data-role="collapsible" >
+          <h2>Chicken</h2>
+              <ul data-role="listview" data-filter="true">
+                  <li><a href="index.html">Acura</a></li>
+                  <li><a href="index.html">Audi</a></li>
+                  <li><a href="index.html">BMW</a></li>
+                  <li><a href="index.html">Cadillac</a></li>
+                  <li><a href="index.html">Chrysler</a></li>
+                  <li><a href="index.html">Dodge</a></li>
+                  <li><a href="index.html">Ferrari</a></li>
+                  <li><a href="index.html">Ford</a></li>
+                  <li><a href="index.html">GMC</a></li>
+                  <li><a href="index.html">Honda</a></li>
+              </ul>
+          </div>
+          <div data-role="collapsible" >
+            <h2>Beef</h2>
+                <ul data-role="listview" data-filter="true">
+                    <li><a href="index.html">Acura</a></li>
+                    <li><a href="index.html">Audi</a></li>
+                    <li><a href="index.html">BMW</a></li>
+                    <li><a href="index.html">Cadillac</a></li>
+                    <li><a href="index.html">Chrysler</a></li>
+                    <li><a href="index.html">Dodge</a></li>
+                    <li><a href="index.html">Ferrari</a></li>
+                    <li><a href="index.html">Ford</a></li>
+                    <li><a href="index.html">GMC</a></li>
+                    <li><a href="index.html">Honda</a></li>
+                </ul>
+            </div> -->
+      </div>
+    </div><!-- /content -->
+  </div><!-- /page -->
+
+  <!-- Show Canteen List -->
+  <div data-role="page" id="showCanteenList"  data-share="#shared" class="currentPage">
+    
+    <div role="main" class="ui-content">
+      <div id='loader' style='display: none;'>
+        <img id="loading-image" src='img/ajax-loader.gif' width='32px' height='32px'>
+      </div>
+      <img src="img/loginbk.jpg" width="100%" height="auto">
+      <div class="container overRidejquerymrg0" id="fetchCanteenJson">
+        <div class="pages-head">
+          <!-- <h3>Canteen List</h3> -->
+        </div>
+        <!-- <div data-role="collapsible" >
+          <h2>San Donato - Università</h2>
+              <p>Address: 50127 Florence, Metropolitan City of Florence</p>
+              <a class="ui-btn ui-icon-carat-r ui-btn-icon-right"  onclick="canteenTodayMenu()" >Check Today Menu</a> 
+          </div>
+          <div data-role="collapsible" >
+            <h2>San Donato - Università</h2>
+              <p>Address: 50127 Florence, Metropolitan City of Florence</p>
+              <a class="ui-btn ui-icon-carat-r ui-btn-icon-right"  onclick="CanteenMenu()" >Check Today Menu</a> 
+            </div> -->
+      </div>
+    </div><!-- /content -->
+  </div><!-- /page -->
+
+<!-- Header and footer content start     -->
+  <div data-role="page" id="shared" >
+    <div data-role="header" data-position="fixed" class="headContainer">
+      <h1 id="headingval"></h1>
+      
+      <a href="#mypanel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+    </div>
+    <div data-role="footer" data-position="fixed" class="footerContainer">
+      <!-- <h1></h1> -->
+      <div class="vMiddle">
+        <div class="vframe">
+          <img src="img/flogo.png" >
+        </div>
+      </div>
+      <!-- <span class="helper"></span> -->
+      
+    </div>
+  <!-- Header and footer content end  -->
+</body>
+</html>

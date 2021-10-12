@@ -1,0 +1,28 @@
+/* personal css start */
+
+.headContainer
+{
+    background-color: #a00009 !important;
+    color: #FFFFFF !important;
+}
+.footerContainer
+{
+    background-color: #a00009 !important;
+    color: #FFFFFF !important;
+}
+.panelContainer ul
+{
+    /* background-color: #004180 !important; */
+    /* color: #FFFFFF !important; */
+    list-style-type: none;
+    padding: 1px;
+}
+.formStyle label
+{
+    /* margin-top: 10px; */
+}
+
+.overRidejquerymrg0 .ui-field-contain > label ~ [class*="ui-"], .ui-field-contain .ui-controlgroup-controls
+{
+    margin: .5em 0;
+}
