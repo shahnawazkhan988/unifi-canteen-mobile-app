@@ -14,11 +14,11 @@ My mobile application is based on two types of users:</p>
   <li>Students of Unifi.</li>
 </ul>
 <p float="left">
-  <img src="www/img/add-menu-category-2.png" width="300" />
-  <img src="www/img/add-menu-item-particular-category-2.png" width="300" /> 
-  <img src="www/img/add-today-menu-1.2.png" width="300" />
-  <img src="www/img/add-today-menu-2.1.png" width="300" />
-  <img src="www/img/add-today-menu-3.1.png" width="300" /> 
-  <img src="www/img/canteen-list1.2.png" width="300" />
-  <img src="www/img/canteen-list2.1.png" width="300" />
+  <img src="www/img/add-menu-category-2.png" width="250" />
+  <img src="www/img/add-menu-item-particular-category-2.png" width="250" /> 
+  <img src="www/img/add-today-menu-1.2.png" width="250" />
+  <img src="www/img/add-today-menu-2.1.png" width="250" />
+  <img src="www/img/add-today-menu-3.1.png" width="250" /> 
+  <img src="www/img/canteen-list1.2.png" width="250" />
+  <img src="www/img/canteen-list2.1.png" width="250" />
 </p>
